@@ -1,0 +1,1004 @@
+<html>
+<head>
+    <style>
+        body {
+  margin: 0;
+  padding: 0;
+  background-color: #EAF6F6;
+  font-family: 'Poppins', sans-serif;
+  color: #003B46;
+}
+
+/* Header Style */
+.header {
+  background-color: #B2DFDB;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 0 0 20px 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* Close Button */
+.close {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.close button {
+  background-color: #00BCD4;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.close button:hover {
+  background-color: #0097A7;
+}
+
+/* Search Section */
+#searchSection {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#search {
+  width: 80%;
+  max-width: 400px;
+  padding: 12px 16px;
+  border: 2px solid #B2DFDB;
+  border-radius: 10px;
+  outline: none;
+  background-color: #ffffff;
+  font-size: 1rem;
+  color: #003B46;
+  transition: box-shadow 0.3s ease;
+}
+
+#search:focus {
+  box-shadow: 0 0 8px #00BCD4;
+}
+
+#results {
+  margin-top: 20px;
+  color: #00796B;
+  font-weight: 500;
+}
+
+.details {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.details img {
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.details img:hover {
+  transform: scale(1.02);
+}
+
+.details h2 {
+  margin-top: 20px;
+  font-size: 2rem;
+  color: #004D40;
+  font-weight: 600;
+}
+
+/* Divider line */
+hr {
+  border: none;
+  height: 2px;
+  background: #B2DFDB;
+  margin: 40px auto;
+  width: 80%;
+}
+
+/* Grid Layout */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 20px 40px;
+}
+
+/* Individual Product Card */
+.product {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  width: 400px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+/* Button Styling */
+.product button {
+  background-color: #00BCD4;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.product button:hover {
+  background-color: #0097A7;
+}
+
+.product a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.find {
+  background: linear-gradient(to right, #E0F7FA, #B2EBF2);
+  border-radius: 20px;
+  padding: 40px 20px;
+  margin: 40px auto;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 700px;
+}
+
+.find h2 {
+  font-size: 2rem;
+  color: #006064;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Button Styling */
+.find button {
+  background-color: #00BCD4;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.find button:hover {
+  background-color: #0097A7;
+}
+
+.find a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.section7 {
+  background: linear-gradient(to right, #E0F2F1, #B2EBF2);
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 20px;
+  margin: 40px auto;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.section7 h2 {
+  font-size: 2rem;
+  color: #004D40;
+  margin-bottom: 30px;
+  font-weight: 600;
+  animation: fadeInText 1.2s ease forwards;
+}
+
+.section7 a {
+  margin: 0 15px;
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+.section7 img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section7 a:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Global styles */
+*{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+}
+
+/* Result container styles */
+.result {
+    display: flex;
+    align-items: center;
+    background: #004D40;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Image inside result */
+.result img {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+/* Links inside result */
+.result a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .product {
+        width: 90%;
+        padding: 12px;
+    }
+
+    #search {
+        width: 90%;
+    }
+
+    .find, .section7 {
+        width: 95%;
+        padding: 30px 15px;
+    }
+
+    .section7 h2 {
+        font-size: 1.8rem;
+    }
+
+    .product button, .find button {
+        padding: 10px 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .product {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .find, .section7 {
+        padding: 20px 10px;
+    }
+
+    .section7 h2 {
+        font-size: 1.5rem;
+    }
+
+    .product button, .find button {
+        padding: 8px 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+
+
+ <body >
+
+<div class="header">
+    <h1 align = "center">Astren Blaze</h1>  </div>
+
+  
+
+   <div class="close"> <button id="toggleSearch">Close Search</button> </div> 
+<div id="searchSection">
+  <input type="text" id="search" placeholder="Search products...">
+  <div id="results"></div>
+</div>
+
+
+    <script>
+        const products = [
+          { name: "GOLDEN MMA GLOVES", image: "img24.jpg", link: "https://amzn.to/3E2oFRI" },
+          { name: "WHITE MMA GLOVES", image: "img25.jpg", link: "https://amzn.to/44BcDO4" },
+          { name: "GRAPPLING GLOVES", image: "img26.jpg", link: "https://amzn.to/3EooiXn" },
+          { name: "LEATHER GRAPPLING GLOVES", image: "img27.jpg", link: "https://amzn.to/4cGq0pD"},
+          {name: "FANG MOUTH GUARD" , image:" img28.jpg" , link: "https://amzn.to/3R0FCPf" },
+          {name: "PRO MOUTH GUARD" , image:"img29.jpg" , link: "https://amzn.to/4hWh7xC" },
+          {name: "COMBAT MOUTH GUARD" , image:"img30.jpg" , link: "https://amzn.to/4i0Gbnm" },
+          {name: "SKULL SHIN GUARD" , image:"img31.jpg" , link: "https://amzn.to/3E6oXHi" },
+          {name: "INSTEP SHIN GUARD" , image:"img32.jpg" , link: "https://amzn.to/43CL2HO" },
+          {name: "COMBAT SHIN GUARD" , image:"img33.jpg" , link: "https://amzn.to/4lueFl8" },
+          {name: "PADDED SHIN GUARD" , image:"img34.jpg" , link: "https://amzn.to/41Usb9Q" },
+          {name: "BELLY PADS" , image:"img35.jpg" , link: "https://amzn.to/3XJjgWp" },
+          {name: "STRIKING PADS [KICKS]" , image:"img36.jpg" , link: "https://amzn.to/3FRxj65" },
+          {name: "BOXING STRIKING PADS" , image:"img37.jpg" , link: "https://amzn.to/4iiA9i9" },
+          {name: "PUNCHING BAG 4FT" , image:"img38.jpg" , link: "https://amzn.to/3R0FCPf" },
+          {name: "SYMACTIVE PUNCHING BAG" , image:"img39.jpg" , link: "https://amzn.to/4jlfhYu" },
+          {name: "WRESTLING DUMMY" , image:"img40.jpg" , link: "https://amzn.to/42ahuyJ" },
+          {name: "GRAPPLING DUMMY" , image:"img41.jpg" , link: "https://amzn.to/4cm1D4W" },
+          {name: "AKIBA DRAGON SHORTS" , image:"img42.jpg" , link: "https://amzn.to/4hWvpOQ" },
+          {name: "AKIBA LION SHORTS" , image:"img43.jpg" , link: "https://amzn.to/42g3F1K" },
+          {name: "MMA WRAPS [INVINCIBLE]" , image:"img44.jpg" , link: "https://amzn.to/44bFnIS" },
+          {name: "MMA WRAPS [AMAZON]" , image:"img45.jpg" , link: "https://amzn.to/44bFnIS" },
+          {name: "MMA WRAPS [LEW]" , image:"img46.jpg" , link: "https://amzn.to/3E7JcnU" },
+          {name: "PRO HEADGEAR" , image:"img47.jpg" , link: "https://amzn.to/41VLIGY" },
+          {name: "COMBAT HEADGEAR" , image:"img48.jpg" , link: "https://amzn.to/4hUENm1" },
+          {name: "AMATEUR HEADGEAR" , image:"img49.jpg" , link: "https://amzn.to/3E5Dkvk" },
+          {name: "ANKLE SUPPORT [BOLDFIT]" , image:"img50.jpg" , link: "https://amzn.to/3R1IueM" },
+          {name: "ANKLE SUPPORT [VICTORY]" , image:"img51.jpg" , link: "ttps://amzn.to/4lgENjb" },
+          {name: "ANKLE SUPPORT [PREMIUM]" , image:"img52.jpg" , link: "https://amzn.to/446IP7x" },
+          {name: "ANKLE WEIGHT 1 KG" , image:"img53.jpg" , link: "https://amzn.to/3R2TLM0" },
+          {name: "ANKLE WEIGHT 2 KG" , image:"img54.jpg" , link: "https://amzn.to/4lkW5fa" },
+          {name: "PUNCHING BAG FOR GYM" , image:"img55.jpg" , link: "https://amzn.to/4cs8ZUE" },
+          {name: "LEATHER PUNCHING BAG" , image:"img56.jpg" , link: "https://amzn.to/4cmOZme" },
+          {name: "STANDING PUNCHING BAG" , image:"img57.jpg" , link: "https://amzn.to/42gRSQG" },
+          {name: "MULTIPURPOSE PUNCHING BAG" , image:"img58.jpg" , link: "https://amzn.to/3G5nMrX" },
+          {name: "BOXING GLOVE 12 OZ" , image:"img59.jpg" , link: "https://amzn.to/4jhAz9h" },
+          {name: "BOXING GLOVE 14 OZ" , image:"img60.jpg" , link: "https://amzn.to/3YexPkI" },
+          {name: "AMATEUR BOXING GLOVE 12 OZ" , image:"img61.jpg" , link: "https://amzn.to/4iU7sJf" },
+          {name: "AMATEU BOXING GLOVES 14 OZ" , image:"img62.jpg" , link: "https://amzn.to/3R4gwz8" },
+          {name: "PRO BOXING GLOVE 12 OZ" , image:"img63.jpg" , link: "https://amzn.to/41Z88aq" },
+          {name: "PRO BOXING GLOVE 14 OZ" , image:"img64.jpg" , link: "https://amzn.to/3DTQJXt" },
+          {name: "HEADGEAR" , image:"img65.jpg" , link: "https://amzn.to/4i1eNFI" },
+          {name: "LEATHER HEADGEAR" , image:"img66.jpg" , link: "https://amzn.to/4jgtO7s" },
+          {name: "AMATEUR HEADGEAR" , image:"img67.jpg" , link: "https://amzn.to/4iU1h7V" },
+          {name: "PRO LEATHER HEADGEAR" , image:"img68.jpg" , link: "https://amzn.to/4jeNOau" },
+          {name: "SPEED BAG" , image:"img69.jpg" , link: "https://amzn.to/4cgoPlb" },
+          {name: "DOUBLE END SPEED BAG" , image:"img70.jpg" , link: "https://amzn.to/4chJmWl" },
+          {name: "WRESTLING MAT [XTRIM]" , image:"img71.jpg" , link: "https://amzn.to/3RHKTvn" },
+          {name: "WRESTLING MAT [UNI]" , image:"img72.jpg" , link: "https://amzn.to/4crgf33" },
+          {name: "WRESTLING MAT [EVA FOAM]" , image:"img73.jpg" , link: "https://amzn.to/3RdV9eG" },
+          {name: "PRO WRESTLING MAT" , image:"img74.jpg" , link: "https://amzn.to/4i70Dmn" },
+          {name: "WRESTLING DUMMY" , image:"img75.jpg" , link: "https://amzn.to/4j4OSyl" },
+          {name: "GRAPPLING DUMMY" , image:"img76.jpg" , link: "https://amzn.to/4cmwSN6" },
+          {name: "GRAPPLING DUMMY [BJJ]" , image:"img77.jpg" , link: "https://amzn.to/42D74cl" },
+          {name: "PRO WRESTLING DUMMY" , image:"img78.jpg" , link: "https://amzn.to/42DVei7" },
+          {name: "RESISTANCE BAND" , image:"img79.jpg" , link: "https://amzn.to/42ndf2X" },
+          {name: "AMATEUR RESISTANCE BAND" , image:"img80.jpg" , link: "https://amzn.to/4i9n22o" },
+          {name: "PRO RESISTANCE BAND " , image:"img81.jpg" , link: "https://amzn.to/3EfWEpM" },
+          {name: "HEAVY RESISTANCE BAND" , image:"img82.jpg" , link: "https://amzn.to/4lx2cgz" },
+          {name: "MMA SHIRT[FULL SLEEVE]" , image:"img83.jpg" , link: "https://amzn.to/3E6GuPE" },
+          {name: "MMA SHIRT ii [FULL SLEEEVE]" , image:"img84.jpg" , link: "https://amzn.to/4j95oNN" },
+          {name: "MMA SHIRT [BLACK] " , image:"img85.jpg" , link: "https://amzn.to/3EiF5Fy" },
+          {name: "DUMBELL SET I" , image:"img86.jpg" , link: "https://amzn.to/4jtizc7" },
+          {name: "DUMBELL SET II" , image:"img87.jpg" , link: "https://amzn.to/4j0suWE" },
+          {name: "DUMBELL SET III" , image:"img88.jpg" , link: "https://amzn.to/43RdnKE" },
+
+          
+        
+        ]
+    
+        const search = document.getElementById('search');
+        const results = document.getElementById('results');
+    
+        search.addEventListener('input', () => {
+          const value = search.value.toLowerCase();
+          results.innerHTML = '';
+    
+          products.filter(p => p.name.toLowerCase().includes(value)).forEach(p => {
+            const div = document.createElement('div');
+            div.className = 'result';
+            div.innerHTML = `
+              <img src="${p.image}" alt="${p.name}">
+              <a href="${p.link}" target="_blank">${p.name}</a>
+            `;
+            results.appendChild(div);
+          });
+        });
+
+        document.getElementById('toggleSearch').addEventListener('click', function () {
+  const section = document.getElementById('searchSection');
+  if (section.style.display === 'none') {
+    section.style.display = 'block';
+    this.textContent = 'Close Search';
+  } else {
+    section.style.display = 'none';
+    this.textContent = 'Open Search';
+  }
+});
+      </script>
+  
+
+  
+
+
+
+
+<div class="details">
+    <img src="img2.jpg" alt="hello" width="500" height="300">
+    <h2> MIXED MARTIAL ARTS</h2>
+</div> <hr>
+<div class="grid">
+<div class="product">
+    <div><img src="img24.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/3E2oFRI"> GOLDEN MMA GLOVES</a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img25.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/448CbO4"> WHITE MMA GLOVES</a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img26.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/3E0oIxn"> GRAPPLING GLOVES</a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img27.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4cgsQpD">  LEATHER GRAPPLING GLOVES</a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img38.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/3R0FCPf">  PUNCHING BAG [4FT]</a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img39.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4jlfhYu"> SYMACTIVE PUNCHING BAG 4FT </a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img28.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4lfUvuQ">  FANGS MOUTH GUARD </a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img29.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4hWh7xC"> PRO MOUTH GUARD</a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img30.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4i0Gbnm">COMBAT MOUTH GUARD </a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img31.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/3E6oXHi"> SKULL SHIND GUARD</a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img32.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/43CL2HO">INSTEP SHIN GUARD </a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img33.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4lueFl8"> COMBAT SHIN GUARD</a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img34.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/41Usb9Q"> PADDED SHIN GUARD</a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img35.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/3XJjgWp"> BELLY PADS</a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img36.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/3FRxj65"> STRIKING PADS [KICKS]
+    </a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img37.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4iiA9i9"> BOXING STRIKING PADS </a>  </button></div>
+   
+</div>
+
+
+
+<div class="product">
+    <div><img src="img40.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/42ahuyJ"> WRESTLING DUMMY </a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img41.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4cm1D4W"> GRAPPLING DUMMY </a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img42.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4hWvpOQ">  AKIBA DRAGON SHOTRS</a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img43.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/42g3F1K">  AKIBA LION SHOTRS</a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img44.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/44bFnIS"> MMA WRAPS[INVINCIBLE] </a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img45.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4jcEg0t"> MMA WRAPS[AMAZON] </a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img46.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/3E7JcnU">  MMA WRAPS [LEW]</a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img47.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/41VLIGY">  PRO HEADGEAR</a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img48.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4hUENm1"> COMBAT HEADGEAR </a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img49.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/3E5Dkvk"> AMATEUR HEADGEAR</a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img50.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/3R1IueM"> ANKLE SUPPORTS[BOLDFIT] </a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img51.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4lgENjb"> ANKLE SUPPORTS [VICTORY] </a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img52.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/446IP7x"> ANKLE SUPPORTS [PREMIUM]</a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img53.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/3R2TLM0"> ANKLE WEIGHT 1 KG </a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img54.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4lkW5fa"> ANKLE WEIGHT 2 KG </a>  </button></div>
+   
+</div>
+
+
+
+<div class="product">
+    <div><img src="img55.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4cs8ZUE"> PUNCHING BAG FOR GYM </a>  </button></div>
+   
+</div>
+
+
+<div class="product">
+    <div><img src="img56.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4cmOZme">LEATHER PUNCHING BAG FOR GYM </a>  </button></div>
+   
+</div>
+
+
+<div class="product">
+    <div><img src="img57.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/42gRSQG"> STANDING PUNCHING BAG </a>  </button></div>
+   
+</div>
+
+
+<div class="product">
+    <div><img src="img58.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/3G5nMrX"> MULTIPURPOSE PUNCHING BAG </a>  </button></div>
+   
+</div>
+
+
+<div class="product">
+    <div><img src="img59.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4jhAz9h"> BOXING GLOVES 12 Oz </a>  </button></div>
+   
+</div>
+
+
+<div class="product">
+    <div><img src="img60.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/3YexPkI"> BOXING GLOVES 14 Oz </a>  </button></div>
+   
+</div>
+
+
+<div class="product">
+    <div><img src="img61.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4iU7sJf">  AMATEUR BOXING GLOVES 12 Oz</a>  </button></div>
+   
+</div>
+
+
+<div class="product">
+    <div><img src="img62.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/3R4gwz8"> AMATEUR BOXING GLOVES 14 Oz </a>  </button></div>
+   
+</div>
+
+
+<div class="product">
+    <div><img src="img63.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/41Z88aq">   PRO BOXING GLOVES 12 Oz</a>  </button></div>
+   
+</div>
+
+
+<div class="product">
+    <div><img src="img64.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/3DTQJXt"> PRO BOXING GLOVES 14 Oz </a>  </button></div>
+   
+</div>
+
+
+<div class="product">
+    <div><img src="img65.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4i1eNFI"> HEADGEAR </a>  </button></div>
+   
+</div>
+
+
+<div class="product">
+    <div><img src="img66.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4jgtO7s"> LEATHER HEADGEAR </a>  </button></div>
+   
+</div>
+
+
+<div class="product">
+    <div><img src="img67.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4iU1h7V"> AMATEUR HEADGEAR </a>  </button></div>
+   
+</div>
+
+
+<div class="product">
+    <div><img src="img68.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4jeNOau"> PRO LEATHER HEADGEAR </a>  </button></div>
+   
+</div>
+
+
+<div class="product">
+    <div><img src="img69.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4cgoPlb">  SPEED BAG </a>  </button></div>
+   
+</div>
+
+
+<div class="product">
+    <div><img src="img70.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4chJmWl"> DOUBLE END SPEED BAG </a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img71.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/3RHKTvn"> WRESTLING MAT [XTRIM] </a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img72.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4crgf33">  WRESLING MAT [UNI]</a>  </button></div>
+   
+</div>
+
+
+<div class="product">
+    <div><img src="img73.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/3RdV9eG">  WRESTLING MAT [EVA FOAM]</a>  </button></div>
+   
+</div>
+
+
+
+
+
+<div class="product">
+    <div><img src="img74.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4i70Dmn"> PRO WRESTLING MAT  </a>  </button></div>
+   
+</div>
+
+
+<div class="product">
+    <div><img src="img75.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4j4OSyl"> WRESTLING DUMMY </a>  </button></div>
+   
+</div>
+
+
+<div class="product">
+    <div><img src="img76.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4cmwSN6">  GRAPPLING DUMMY</a>  </button></div>
+   
+</div>
+
+
+<div class="product">
+    <div><img src="img77.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/42D74cl"> GRAPPLING DUMMY [BJJ] </a>  </button></div>
+   
+</div>
+
+
+<div class="product">
+    <div><img src="img78.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/42DVei7"> PRO GRAPPLING DUMMY </a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img79.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/42ndf2X"> RESISTANCE BAND  </a>  </button></div>
+   
+</div>
+
+
+<div class="product">
+    <div><img src="img80.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4i9n22o">  AMETEUR RESISTANCE BAND  </a>  </button></div>
+   
+</div>
+
+
+<div class="product">
+    <div><img src="img81.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/3EfWEpM"> PRO RESISTANCE BAND </a>  </button></div>
+   
+</div>
+
+
+<div class="product">
+    <div><img src="img82.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4lx2cgz"> HEAVY RESISTANCE BAND </a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img83.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/3E6GuPE"> MMA SHIRT FULL SLEEVE </a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img84.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4j95oNN"> MMA SHIRT ii [FULL SLEEVE] </a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img85.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/3EiF5Fy"> MMA SHIRT [BLACK] </a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img86.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4jtizc7"> </a> DUMBELL SET  I  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img87.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/4j0suWE"> DUMBELL SET  II</a>  </button></div>
+   
+</div>
+
+<div class="product">
+    <div><img src="img88.jpg" alt="hello" width="400" height="300"> </div>
+    <div> <button>  <a href="https://amzn.to/43RdnKE"> DUMBELL SET  III </a>  </button></div>
+   
+</div>
+
+</div>
+
+
+
+
+
+
+
+<div class="find">
+    <div>
+        <h2> FIND THE PERFECT MMA GLOVE</h2>
+        <button><a href="https://amzn.to/3E2oFRI"> SHOP NOW</a></button>
+    </div>
+
+    <div>
+        <h2>FIND THE PERFECT BOXING GLOVE</h2>
+         <button><a href="https://amzn.to/4jhAz9h">SHOP NOW</a></button>
+    </div>
+
+    <div>
+        <h2>FIND THE PERFECT PUNCHING BAG</h2>
+        <button><a href="https://amzn.to/4jlfhYu"> SHOP NOW</a></button>
+    </div>
+
+    <div>
+        <h2>FIND THE PERFECT WRESTLING MAT</h2>
+        <button><a href="https://amzn.to/3RHKTvn">SHOP NOW</a></button>
+    </div>
+
+    <div>
+        <h2> FIND THE PERFECT TRAINING SHIRT       </h2>
+        <button><a href="https://amzn.to/3E6GuPE"> SHOP NOW</a></button>
+    </div>
+
+    
+    <div>
+        <h2> FIND THE PERFECT WRESTLING DUMMY     </h2>
+        <button><a href="https://amzn.to/4j4OSyl"> SHOP NOW</a></button>
+    </div>
+     
+    
+    <div>
+        <h2> FIND THE PERFECT STRENGTH GEAR     </h2>
+        <button><a href="https://amzn.to/4j0suWE"> SHOP NOW</a></button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="section7">
+    <h2>OUR SOCIAL HUB</h2>
+    
+
+
+    <a href="https://www.facebook.com/share/1Empt2R9aF/" target="_blank">
+        <img src="img20.jpg" alt="Facebook">
+    </a>
+
+    <a href="https://youtube.com/@astren-blaze?si=97G_7oE0Glrc9cNU" target="_blank">
+        <img src="img21.jpg" alt="YouTube">
+    </a>
+
+    <a href="https://www.instagram.com/astren_blaze?igsh=N2J3ZW1xZ2E0Yjl3" target="_blank">
+        <img src="img22.jpg" alt="Instagram">
+    </a>
+</div>
+<div class="section7">
+     <hr><h2> ABOUT US</h2>
+    <div>
+       <p> Welcome to Astren Blaze, your ultimate hub for combat sports enthusiasts, fitness warriors, and gear lovers! </p>
+
+<p>At Astrern Blaze, we don’t just promote products—we live the fight, breathe the grind, and embrace the warrior’s mindset. Our mission is to bring you the best MMA gear, training essentials, and combat sports accessories through authentic recommendations and expert insights.
+<p>We are active across multiple platforms to keep you informed, inspired, and equipped:</p>
+
+ <p>🔥 Facebook – Join our community of fighters & fitness lovers.</p>
+<p>🎥 YouTube – In-depth reviews, training tips, and combat insights.</p>
+<p>📸 Instagram – Daily motivation, gear highlights, and exclusive deals.</p>
+
+<p>Whether you’re a beginner or a seasoned fighter, we’re here to help you choose the best gear, level up your training, and fuel your passion for combat sports. Follow us and become part of the Astren Blaze Fight Family!</p>
+
+ <p>💪 Train hard. Fight smart. Gear up with Astren Blaze. 🥊🔥</p>
+  <div>  <hr><p> Astren Blaze &#169 2025</p> </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
